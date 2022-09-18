@@ -1,0 +1,11 @@
+.buttonbox{
+    text-align: center;
+}
+.btn{
+    height: 40px;
+    width:80px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 8px;
+    border-width: 1px;
+}

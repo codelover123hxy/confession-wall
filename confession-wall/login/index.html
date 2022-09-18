@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/login.css">
+    <script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+    <script src="../src/js/submit.js"></script>
+</head>
+<body>
+    <div class="container" id="app" >
+        <div class="title">登录</div>
+        <div style="margin: 0 150px;">
+            <div class="inputbox">
+                用户名:<input class="text" v-model="info.username" placeholder="username" type="text" name="" id="">
+            </div>
+            <div class="inputbox">
+                密&nbsp;&nbsp;&nbsp;码:<input class="text" v-model="info.password" placeholder="password" type="password" name="" id="">
+            </div>
+        </div>
+        <div class="buttonbox" >
+            <button class="button" @click="login">登录</button>
+            <button class="button" onclick="returnBack()">返回</button>
+        </div>
+    </div>
+</body>
+
+<script src="../src/js/link.js"></script>
+<script src="../src/js/submit.js"></script>
+<script>
+    // import axios from 'axios'
+    new Vue({
+    el:"#app",
+    data:{
+        info:{
+            username: "1",
+            password: "2"
+        }
+    },
+    methods:{
+        login(){
+            var data={};
+            data.username=this.info.username;
+            data.password=this.info.password;
+            console.log(data);
+            // axios.get('').then(res=>{
+                
+            // })
+            // .catch(err=>{
+            //     console.log(err);
+            // })
+        }
+    }
+})
+</script>
+</html>
