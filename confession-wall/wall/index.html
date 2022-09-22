@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/css/wall.css">
+</head>
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+<body>
+    <div class="container" id="app">
+        <div class="title">
+            表白墙
+        </div>
+        <div class="btn" >
+            <button class="btn-quit" onclick="gotoAdd()">表白</button>
+            <button class="btn-quit" onclick="reload()">刷新</button>
+            <button class="btn-quit" onclick="quit()">退出</button>
+        </div>
+        <div class="bar" style="margin-top:-50px">
+            <div class="confession1">
+                <div class="heart"></div>
+                <div class="confessionitem">
+                    <div class="name">xxxx</div>
+                    <div class="content">喜欢你</div>
+                    <div class="author">-by cx</div>
+                </div>
+            </div>
+            <div class="confession2">
+                <div class="heart"></div>
+                <div class="confessionitem">
+                    <div class="name">xxxxx</div>
+                    <div class="content">喜欢你</div>
+                    <div class="author">-by sxf</div>
+                </div>
+            </div>
+            <div class="confession3">
+                <div class="heart"></div>
+                <div class="confessionitem">
+                    
+                    <div class="name">xxx</div>
+                    <div class="content">喜欢你</div>
+                    <div class="author">-by gj</div>
+                </div>
+                
+            </div>
+            <div class="confession4">
+                <div class="heart"></div>
+                <div class="confessionitem">
+                    
+                    <div class="name">xxx</div>
+                    <div class="content">喜欢你</div>
+                    <div class="author">-by gj</div>
+                </div>
+                
+            </div>
+            <div class="confession5">
+                <div class="heart"></div>
+                <div class="confessionitem">
+                    
+                    <div class="name">xxx</div>
+                    <div class="content">喜欢你</div>
+                    <div class="author">-by gj</div>
+                </div>
+                
+            </div>
+            <div class="confession6">
+                <div class="heart"></div>
+                <div class="confessionitem">
+                    
+                    <div class="name">xxx</div>
+                    <div class="content">喜欢你</div>
+                    <div class="author">-by gj</div>
+                </div>
+                
+            </div>
+            <div class="confession7">
+                <div class="heart"></div>
+                <div class="confessionitem">
+                    <div class="name">xxx</div>
+                    <div class="content">喜欢你</div>
+                    <div class="author">-by gj</div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="../src/js/link.js"></script>
+<script src="../src/js/confession.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+    var vm=new Vue({
+        el:'#app',
+        data:{ 
+            content:"",
+            name:"",
+            time:"",
+            user:""
+        },
+        created:function(){
+                var url="https://localhost:8080/"
+                var data={};
+                console.log("喜欢你");
+                axios.get(url).then(function(res){
+                    console.log(res);
+
+                    this.content=res.data.content;
+                    this.name=res.data.name;
+                    this.time=res.data.time; 
+                    this.res.data.user; 
+                })
+            },
+        methods:{ 
+   
+        }
+    })
+</script>

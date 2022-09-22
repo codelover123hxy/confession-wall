@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="../../src/css/add-manage.css">
+<script src="https://cdn.bootcdn.net/ajax/libs/vue/2.6.14/vue.min.js"></script>
+<body>
+    <div class="content" id="app">
+        <div class="topbar">
+            <button class="btn-user" onclick="quit()">{{user}}</button>
+        </div>          
+        <div class="main">
+            <div style="margin-top: 100px">
+                <label for="express" style="font-size:xx-large">我想对Ta说:</label>
+            </div>
+            <div>
+                <textarea id="express" name="express" v-model="confession" placeholder="confession" > </textarea>
+            </div>
+            <div style="font-size: larger;margin-top: 50px;">
+                <label for="user">表白人：</label>
+            </div>
+            <div>
+                <input type="text" id="user" name="user" v-model="name" placeholder="name">
+            </div>
+            <div >
+                <input style="font-size: large;" class="btn-submit" type="submit" id="submit" @click="submitConfession" value="发送表白">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="../../src/js/link.js"></script>
+<script>
+    var vm=new Vue({
+        el:"#app",
+        data: {
+            confession:"",
+            name:"",
+            user:""
+        },
+        created:function(){
+                var user=window.location.href.split("=")[1];
+                if (user=="undefined"){
+                    alert("请先登录!");
+                    window.location.href="../../login/index.html";
+                }
+                this.user=user;
+        },
+        methods:{
+            submitConfession(){
+                var data={};
+                data.content=this.confession;
+                data.name=this.name;
+                data.user=window.location.href.split("=")[1];
+                const url="http://localhost:8080/save"
+                $.ajax({
+                    url:url,
+                    method:'POST',
+                    data:JSON.stringify(data),
+                    success:(res)=>{
+                        console.log(res);
+                        if (res.data.code==200){
+                            alert("发送表白成功");
+                        }
+                    }
+                })
+            },
+  
+        }
+        })
+</script>
+</html>

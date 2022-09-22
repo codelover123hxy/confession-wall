@@ -1,0 +1,119 @@
+.container{
+    width:auto;
+    height:900px;
+    margin: 0 auto;
+    padding-top: 20px;
+    background: #ddd6f3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #faaca8, #ddd6f3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #faaca8, #ddd6f3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.title{
+    font-size: 80px;
+    font-weight: 500;
+    text-align: center;
+    color:#9639e3
+}
+.heart {
+    position: relative;
+    z-index: 0;
+    width: 200px;
+    height: 200px;
+    background-color: #ff5d60;
+    transform: rotate(45deg);	
+  }
+  .heart::before {
+    position: relative;
+    z-index:-1;
+    transform: translateX(-50%);
+  }
+  .heart::after {
+    position: relative;
+    z-index:-1;
+    transform: translateY(-50%);
+  }
+  .heart::before {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #ff5d60;
+    border-radius: 100%;
+  }
+  .heart::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+    background-color: #ff5d60;
+    border-radius: 100%;
+  }
+.confessionitem{
+  position: relative;
+  background: none;
+  margin-top: -200px;
+  z-index: 100;
+}
+.confessionitem .name{
+
+  font-size: xx-large;
+  background: none;
+
+}
+.confessionitem .content{
+
+  font-size:larger;
+  background: none;
+}
+.confessionitem .author{
+
+  font-size: x-large;
+  background: none;
+}
+.btn{
+  margin-left:1550px;
+  margin-top: -70px;
+}
+.btn-quit{
+  height:80px;
+  width:80px;
+  margin-left: 10px;
+  border-radius: 100px;
+  border:none;
+  font-size: large;
+}
+
+.btn-quit:hover{
+  background-color: #efecfa;
+}
+.confession1{
+  margin-left: 200px;
+  margin-top: 200px;
+}
+.confession2{
+  margin-left: 600px;
+  margin-top: -100px;
+}
+.confession3{
+  margin-left: 1000px;
+  margin-top: -100px;
+}
+.confession4{
+  margin-left: 1400px;
+  margin-top: -100px;
+}
+.confession5{
+  margin-left: 400px;
+  margin-top: 200px;
+}
+.confession6{
+  margin-left: 800px;
+  margin-top: -100px;
+}
+.confession7{
+  margin-left: 1200px;
+  margin-top: -100px;
+}

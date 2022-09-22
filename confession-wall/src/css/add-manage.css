@@ -1,0 +1,47 @@
+.topbar{
+    height:70px;
+    background-color: rgb(231, 255, 255);
+   
+}
+.main{
+    text-align: center;
+    margin: 0 auto;
+}
+#express{
+    height: 100px;
+    width:300px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+.btn-submit{
+    height: 50px;
+    width: 100px;
+    margin-top: 100px;
+    border-radius: 10px;
+    border:none;
+}
+.btn-submit :hover{
+    background-color: rgb(102, 154, 199);
+}
+.btn-quit{
+    width:60px;
+    height:60px;
+    margin-left: 1600px;
+    border-radius: 100px;
+    border: none;
+}
+.btn-user{
+    width:60px;
+    height:60px;
+    margin-left: 1600px;
+    border-radius: 100px;
+    border-width: 1px;
+    border-color: aqua; 
+    background-color: rgb(219, 255, 243);
+}
+.content{
+    height: 1100px;
+    background-image: url(../img/add-background.webp);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
